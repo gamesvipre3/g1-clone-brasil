@@ -1,6 +1,8 @@
 import Header from "@/components/Header";
 import MarketTicker from "@/components/MarketTicker";
 import Seo from "@/components/Seo";
+import TopBar from "@/components/TopBar";
+import AdBanner from "@/components/AdBanner";
 import heroImage from "@/assets/article-hero.jpg";
 import { Facebook, Link as LinkIcon, Share2, MessageCircle } from "lucide-react";
 
@@ -37,13 +39,15 @@ const Index = () => {
         jsonLd={jsonLd}
       />
 
+      <TopBar />
       <Header />
       <MarketTicker />
+      <AdBanner />
 
       <main className="container mx-auto px-4">
         <article className="mx-auto max-w-3xl py-8">
-          <header className="mb-8">
-            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight">
+          <header className="mb-8 text-center">
+            <h1 className="text-5xl md:text-6xl font-extrabold leading-tight tracking-tight">
               Governo publica nova lista de 'bets' autorizadas a atuar no Brasil até 2029
             </h1>
             <p className="mt-4 text-lg text-muted-foreground">
@@ -54,37 +58,28 @@ const Index = () => {
               Por <span className="font-medium text-foreground">Redação g1</span> — 11/02/2025 07h59 · Atualizado há 3 meses
             </div>
 
-            <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
+            <div className="mt-6 grid grid-cols-3 gap-3">
               <a
-                className="flex items-center justify-center gap-2 h-10 rounded-md bg-secondary hover:bg-accent transition-[background-color] duration-200"
-                href="#"
-                aria-label="Compartilhar"
-              >
-                <Share2 className="h-4 w-4" /> Compartilhar
-              </a>
-              <a
-                className="flex items-center justify-center gap-2 h-10 rounded-md bg-secondary hover:bg-accent transition-[background-color] duration-200"
+                className="flex items-center justify-center gap-2 h-12 rounded-full bg-secondary hover:bg-accent transition-[background-color] duration-200"
                 href="#"
                 aria-label="Facebook"
               >
                 <Facebook className="h-4 w-4" /> Facebook
               </a>
               <a
-                className="flex items-center justify-center gap-2 h-10 rounded-md bg-secondary hover:bg-accent transition-[background-color] duration-200"
+                className="flex items-center justify-center gap-2 h-12 rounded-full bg-secondary hover:bg-accent transition-[background-color] duration-200"
                 href="#"
                 aria-label="WhatsApp"
               >
                 <MessageCircle className="h-4 w-4" /> WhatsApp
               </a>
-              <button
-                className="flex items-center justify-center gap-2 h-10 rounded-md bg-secondary hover:bg-accent transition-[background-color] duration-200"
-                onClick={() => {
-                  navigator.clipboard.writeText(window.location.href);
-                }}
-                aria-label="Copiar link"
+              <a
+                className="flex items-center justify-center gap-2 h-12 rounded-full bg-secondary hover:bg-accent transition-[background-color] duration-200"
+                href="#"
+                aria-label="Compartilhar"
               >
-                <LinkIcon className="h-4 w-4" /> Copiar link
-              </button>
+                <Share2 className="h-4 w-4" /> Compartilhar
+              </a>
             </div>
           </header>
 
