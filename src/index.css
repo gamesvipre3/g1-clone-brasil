@@ -51,6 +51,15 @@ All colors MUST be HSL.
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 4 84% 45%;
 
+    /* Brand palette (HSL, matched to model site) */
+    --brand-globocom: 214 96% 44%;
+    --brand-g1: 4 84% 45%;
+    --brand-ge: 149 93% 35%;
+    --brand-gshow: 32 100% 50%;
+    --brand-globoplay: 348 98% 50%;
+    --brand-oglobo: 215 66% 36%;
+    --brand-valor: 186 74% 33%;
+
     /* Extras for polish */
     --gradient-hero: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(0 0% 98%) 60%, hsl(0 0% 96%) 100%);
     --shadow-soft: 0 8px 24px hsl(var(--primary) / 0.08);
@@ -104,7 +113,7 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
 }
 
@@ -119,8 +128,16 @@ All colors MUST be HSL.
     animation: ticker-marquee 30s linear infinite;
     will-change: transform;
   }
-}
 
+  /* Brand text color utilities */
+  .text-brand-globocom { color: hsl(var(--brand-globocom)); }
+  .text-brand-g1 { color: hsl(var(--brand-g1)); }
+  .text-brand-ge { color: hsl(var(--brand-ge)); }
+  .text-brand-gshow { color: hsl(var(--brand-gshow)); }
+  .text-brand-globoplay { color: hsl(var(--brand-globoplay)); }
+  .text-brand-oglobo { color: hsl(var(--brand-oglobo)); }
+  .text-brand-valor { color: hsl(var(--brand-valor)); }
+}
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee {
     animation: none;

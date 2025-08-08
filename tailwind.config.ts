@@ -17,6 +17,10 @@ export default {
 				'2xl': '1400px'
 			}
 		},
+		fontFamily: {
+			sans: ['"Encode Sans"', 'system-ui', 'sans-serif'],
+			'globo-condensed': ['"Encode Sans Condensed"', 'system-ui', 'sans-serif']
+		},
 		extend: {
 			colors: {
 				border: 'hsl(var(--border))',
