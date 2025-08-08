@@ -107,3 +107,22 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+/* Ticker marquee */
+@keyframes ticker-marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@layer utilities {
+  .animate-marquee {
+    animation: ticker-marquee 30s linear infinite;
+    will-change: transform;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+}
